@@ -1,6 +1,6 @@
 {
   "name": "react-native-facebook-account-kit",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "A react-native library for Facebook Account Kit",
   "main": "index.js",
   "files": [
@@ -27,8 +27,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/underscopeio/react-native-facebook-account-kit.git"
+    "url": "https://github.com/yakisama12/react-native-facebook-account-kit.git"
   },
+  "homepage": "https://github.com/yakisama12/react-native-facebook-account-kit.git",
   "author": "Underscope",
   "license": "MIT",
   "dependencies": {
