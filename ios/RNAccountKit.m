@@ -111,8 +111,8 @@ RCT_EXPORT_METHOD(getCurrentAccount: (RCTPromiseResolveBlock)resolve
     if(themeOptions == nil) {
       return theme;
     }
-    NSArray *colorOptions = @[@"backgroundColor",
-                              @"headerBackgroundColor",@"headerTextColor",@"headerButtonTextColor",
+    NSArray *colorOptions = @[@"backgroundColor", @"buttonHighlightedBackgroundColor", @"buttonHighlightedBorderColor",
+                              @"buttonHighlightedTextColor", @"headerBackgroundColor",@"headerTextColor",@"headerButtonTextColor",
                               @"buttonBackgroundColor",@"buttonBorderColor",@"buttonTextColor",
                               @"buttonDisabledBackgroundColor",@"buttonDisabledBorderColor",
                               @"buttonDisabledTextColor",@"iconColor",@"inputBackgroundColor",
@@ -135,6 +135,14 @@ RCT_EXPORT_METHOD(getCurrentAccount: (RCTPromiseResolveBlock)resolve
             }
             if (UIStatusBarStyleLightContent == statusBarStyle) {
                 theme.statusBarStyle = UIStatusBarStyleLightContent;
+            }
+        } else if([key isEqualToString:@"headerTextType"]) {
+            int headerTextType = ((NSNumber*)[themeOptions valueForKey:key]).intValue;
+            if (0 == headerTextType) {
+                theme.headerTextType = 0;
+            }
+            if (1 == headerTextType) {
+                theme.headerTextType = 1;
             }
         }
     }
